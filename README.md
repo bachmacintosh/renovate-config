@@ -8,6 +8,7 @@ Use this config for applications.
 
 ```json
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>bachmacintosh/renovate-config"]
 }
 ```
@@ -18,6 +19,7 @@ Use this config with JS/TS applications.
 
 ```json
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>bachmacintosh/renovate-config:jslib"]
 }
 ```
