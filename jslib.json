@@ -27,7 +27,11 @@
       "groupSlug": "typescript-eslint-monorepo"
     },
     {
-      "matchPackageNames": ["jest", "@types/jest", "ts-jest"],
+      "matchSourceUrlPrefixes": [
+        "https://github.com/facebook/jest",
+        "https://github.com/kulshekhar/ts-jest"
+      ],
+      "matchPackageNames": ["@types/jest"],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Jest and/or Related Development Dependencies",
       "groupSlug": "jest-and-deps"
