@@ -9,6 +9,7 @@
   "rebaseWhen": "behind-base-branch",
   "platformCommit": true,
   "stabilityDays": 3,
+  "dependencyDashboardHeader": "",
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
