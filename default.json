@@ -1,20 +1,61 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config that should be used for any BachMacintosh projects that are not JS/TS libraries",
-  "extends": ["config:base", "group:allNonMajor", ":gitSignOff"],
-  "timezone": "America/New_York",
+  "extends": ["config:base", ":gitSignOff"],
   "schedule": ["after 5am and before 11am"],
+  "timezone": "America/New_York",
   "labels": ["dependencies"],
   "assignees": ["bachmacintosh"],
   "rebaseWhen": "behind-base-branch",
   "platformCommit": true,
+  "commitMessageTopic": "Dependency \"{{depName}}\"",
   "stabilityDays": 3,
   "dependencyDashboardHeader": "",
   "packageRules": [
     {
+      "matchDepTypes": ["devDependencies"],
+      "commitMessageTopic": "Development Dependency \"{{depName}}\""
+    },
+    {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "platformAutomerge": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "All Non-Major Dependencies",
+      "groupSlug": "all-dep-minor-patch"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "All Non-Major Development Dependencies",
+      "groupSlug": "all-devdep-minor-patch"
+    },
+    {
+      "extends": "monorepo:typescript-eslint",
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Development Dependency TypeScript ESLint",
+      "groupSlug": "typescript-eslint-monorepo"
+    },
+    {
+      "matchSourceUrlPrefixes": [
+        "https://github.com/facebook/jest",
+        "https://github.com/kulshekhar/ts-jest"
+      ],
+      "matchPackageNames": ["@types/jest"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Jest and/or Related Development Dependencies",
+      "groupSlug": "jest-and-deps"
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["patch", "major", "minor"],
+      "labels": ["typescript"],
+      "commitMessageTopic": "TypeScript Development Version"
     }
   ]
 }
