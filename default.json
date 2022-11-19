@@ -57,12 +57,14 @@
         "https://github.com/vercel/next.js"
       ],
       "matchUpdateTypes": ["patch", "minor", "major"],
-      "groupName": "Dependency Next.js"
+      "groupName": "Dependency Next.js",
+      "groupSlug": "nextjs monorepo"
     },
     {
       "matchSourceUrlPrefixes": ["https://github.com/gatsbyjs/gatsby"],
       "matchUpdateTypes": ["patch", "minor", "major"],
-      "groupName": "Dependency Gatsby"
+      "groupName": "Dependency Gatsby",
+      "groupSlug": "gatsby-monorepo"
     },
     {
       "matchPackageNames": ["typescript"],
