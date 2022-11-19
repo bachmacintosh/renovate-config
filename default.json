@@ -52,6 +52,19 @@
       "groupSlug": "jest-and-deps"
     },
     {
+      "matchSourceUrlPrefixes": [
+        "https://github.com/zeit/next.js",
+        "https://github.com/vercel/next.js"
+      ],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Dependency Next.js"
+    },
+    {
+      "matchSourceUrlPrefixes": ["https://github.com/gatsbyjs/gatsby"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Dependency Gatsby"
+    },
+    {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["patch", "major", "minor"],
       "labels": ["typescript"],
