@@ -58,7 +58,7 @@
       ],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency Next.js",
-      "groupSlug": "nextjs monorepo"
+      "groupSlug": "nextjs-monorepo"
     },
     {
       "matchSourceUrlPrefixes": ["https://github.com/gatsbyjs/gatsby"],
