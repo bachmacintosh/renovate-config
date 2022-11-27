@@ -22,20 +22,6 @@
       "platformAutomerge": true
     },
     {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["dependencies"],
-      "groupName": "All Non-Major Dependencies",
-      "groupSlug": "all-dep-minor-patch"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
-      "groupName": "All Non-Major Development Dependencies",
-      "groupSlug": "all-devdep-minor-patch"
-    },
-    {
       "extends": "monorepo:typescript-eslint",
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Development Dependency TypeScript ESLint",
@@ -65,6 +51,20 @@
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency Gatsby",
       "groupSlug": "gatsby-monorepo"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "All Non-Major Dependencies",
+      "groupSlug": "all-dep-minor-patch"
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "All Non-Major Development Dependencies",
+      "groupSlug": "all-devdep-minor-patch"
     },
     {
       "matchPackageNames": ["typescript"],
