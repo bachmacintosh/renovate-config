@@ -53,6 +53,12 @@
       "groupSlug": "gatsby-monorepo"
     },
     {
+      "matchSourceUrlPrefixes": ["https://github.com/FortAwesome/Font-Awesome"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Dependency Font Awesome",
+      "groupSlug": "font-awesome-monorepo"
+    },
+    {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
       "matchDepTypes": ["dependencies"],
