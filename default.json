@@ -59,20 +59,6 @@
       "groupSlug": "font-awesome-monorepo"
     },
     {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["dependencies"],
-      "groupName": "All Non-Major Dependencies",
-      "groupSlug": "all-dep-minor-patch"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
-      "groupName": "All Non-Major Development Dependencies",
-      "groupSlug": "all-devdep-minor-patch"
-    },
-    {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["patch", "major", "minor"],
       "labels": ["typescript"],
