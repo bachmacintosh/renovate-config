@@ -13,10 +13,6 @@
   "dependencyDashboardHeader": "",
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
-      "commitMessageTopic": "Development Dependency \"{{depName}}\""
-    },
-    {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "platformAutomerge": true
@@ -24,7 +20,7 @@
     {
       "extends": "monorepo:typescript-eslint",
       "matchUpdateTypes": ["patch", "minor", "major"],
-      "groupName": "Development Dependency TypeScript ESLint",
+      "groupName": "Dependency TypeScript ESLint",
       "groupSlug": "typescript-eslint-monorepo"
     },
     {
@@ -34,7 +30,7 @@
       ],
       "matchPackageNames": ["@types/jest"],
       "matchUpdateTypes": ["patch", "minor", "major"],
-      "groupName": "Jest and/or Related Development Dependencies",
+      "groupName": "Jest and/or Related Dependencies",
       "groupSlug": "jest-and-deps"
     },
     {
@@ -61,24 +57,16 @@
     {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["dependencies"],
       "groupName": "All Non-Major Dependencies",
-      "groupSlug": "all-dep-minor-patch",
-      "commitMessageExtra": ""
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
-      "groupName": "All Non-Major Development Dependencies",
-      "groupSlug": "all-devdep-minor-patch",
+      "groupSlug": "all-minor-patch",
       "commitMessageExtra": ""
     },
     {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["patch", "major", "minor"],
       "labels": ["typescript"],
-      "commitMessageTopic": "TypeScript Development Version"
+      "commitMessageTopic": "TypeScript Development Version",
+      "groupName": null
     }
   ]
 }
