@@ -66,7 +66,8 @@
       "matchUpdateTypes": ["patch", "major", "minor"],
       "labels": ["typescript"],
       "commitMessageTopic": "TypeScript Development Version",
-      "groupName": null
+      "groupName": null,
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     }
   ]
 }
