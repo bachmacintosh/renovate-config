@@ -11,6 +11,11 @@
   "commitMessageTopic": "Dependency \"{{depName}}\"",
   "stabilityDays": 3,
   "dependencyDashboardHeader": "",
+  "group": {
+    "branchTopic": "{{{groupSlug}}}",
+    "commitMessageTopic": "{{{groupName}}}",
+    "commitMessageExtra": ""
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
@@ -21,7 +26,8 @@
       "extends": "monorepo:typescript-eslint",
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency TypeScript ESLint",
-      "groupSlug": "typescript-eslint-monorepo"
+      "groupSlug": "typescript-eslint-monorepo",
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
       "matchSourceUrlPrefixes": [
@@ -31,7 +37,8 @@
       "matchPackageNames": ["@types/jest"],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Jest and/or Related Dependencies",
-      "groupSlug": "jest-and-deps"
+      "groupSlug": "jest-and-deps",
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
       "matchSourceUrlPrefixes": [
@@ -40,34 +47,35 @@
       ],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency Next.js",
-      "groupSlug": "nextjs-monorepo"
+      "groupSlug": "nextjs-monorepo",
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
       "matchSourceUrlPrefixes": ["https://github.com/gatsbyjs/gatsby"],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency Gatsby",
-      "groupSlug": "gatsby-monorepo"
+      "groupSlug": "gatsby-monorepo",
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
       "matchSourceUrlPrefixes": ["https://github.com/FortAwesome/Font-Awesome"],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Dependency Font Awesome",
-      "groupSlug": "font-awesome-monorepo"
+      "groupSlug": "font-awesome-monorepo",
+      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
     },
     {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "All Non-Major Dependencies",
-      "groupSlug": "all-minor-patch",
-      "commitMessageExtra": ""
+      "groupSlug": "all-minor-patch"
     },
     {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["patch", "major", "minor"],
       "labels": ["typescript"],
       "commitMessageTopic": "TypeScript Development Version",
-      "groupName": null,
-      "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
+      "groupName": null
     }
   ]
 }
