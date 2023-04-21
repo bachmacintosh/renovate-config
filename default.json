@@ -19,7 +19,8 @@
     {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["major", "minor"],
-      "dependencyDashboardApproval": true
+      "automerge": false,
+      "platformAutomerge": false
     }
   ]
 }
