@@ -8,8 +8,6 @@
   "assignees": ["bachmacintosh"],
   "rebaseWhen": "behind-base-branch",
   "platformCommit": true,
-  "commitMessageTopic": "Dependency \"{{depName}}\"",
-  "stabilityDays": 3,
   "dependencyDashboardHeader": "",
   "packageRules": [
     {
@@ -19,17 +17,7 @@
     },
     {
       "matchPackageNames": ["typescript"],
-      "matchUpdateTypes": ["patch"],
-      "labels": ["typescript"],
-      "commitMessageTopic": "TypeScript",
-      "automerge": true,
-      "platformAutomerge": true
-    },
-    {
-      "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["major", "minor"],
-      "labels": ["typescript"],
-      "commitMessageTopic": "TypeScript",
       "dependencyDashboardApproval": true
     }
   ]
