@@ -23,10 +23,6 @@
       "platformAutomerge": true
     },
     {
-      "extends": "group:allNonMajor",
-      "commitMessageExtra": ""
-    },
-    {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
