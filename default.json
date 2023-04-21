@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config that should be used for any BachMacintosh projects that are not JS/TS libraries",
-  "extends": ["config:base", ":gitSignOff"],
+  "extends": ["config:base", "group:allNonMajor", ":gitSignOff"],
   "schedule": ["on Monday after 5am and before 11am"],
   "timezone": "America/New_York",
   "labels": ["dependencies"],
@@ -10,13 +10,6 @@
   "platformCommit": true,
   "dependencyDashboardHeader": "",
   "packageRules": [
-    {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageExtra": ""
-    },
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
