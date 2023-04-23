@@ -38,6 +38,16 @@
       "groupSlug": "jest-and-deps"
     },
     {
+      "matchSourceUrls": ["https://github.com/logtail/logtail-js"],
+      "groupName": "Logtail Packages",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
+    },
+    {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["patch"],
       "labels": ["typescript"],

@@ -17,6 +17,16 @@
       "platformAutomerge": true
     },
     {
+      "matchSourceUrls": ["https://github.com/logtail/logtail-js"],
+      "groupName": "Logtail packages",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
+    },
+    {
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["major", "minor"],
       "automerge": false,
