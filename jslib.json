@@ -19,7 +19,7 @@
   "rebaseWhen": "behind-base-branch",
   "platformCommit": true,
   "commitMessageTopic": "Dependency \"{{depName}}\"",
-  "stabilityDays": 3,
+  "minimumReleaseAge": "3 days",
   "dependencyDashboardHeader": "",
   "packageRules": [
     {

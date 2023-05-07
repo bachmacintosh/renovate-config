@@ -17,7 +17,7 @@
   "assignees": ["bachmacintosh"],
   "rebaseWhen": "behind-base-branch",
   "platformCommit": true,
-  "stabilityDays": 3,
+  "minimumReleaseAge": "3 days",
   "dependencyDashboardHeader": "",
   "packageRules": [
     {
