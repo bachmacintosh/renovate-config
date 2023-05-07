@@ -32,7 +32,7 @@
       "platformAutomerge": true
     },
     {
-      "extends": "monorepo:typescript-eslint",
+      "extends": ["monorepo:typescript-eslint"],
       "matchUpdateTypes": ["patch", "minor", "major"],
       "groupName": "Development Dependency TypeScript ESLint",
       "groupSlug": "typescript-eslint-monorepo"
