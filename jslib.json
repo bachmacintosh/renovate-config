@@ -3,13 +3,13 @@
   "description": "Renovate config that should be used for all BachMacintosh JS/TS libraries",
   "extends": ["config:js-lib", ":gitSignOff"],
   "schedule": [
-    "On the 1st day of the month on Sunday after 5am and before 11am",
-    "On the 2nd day of the month on Sunday after 5am and before 11am",
-    "On the 3rd day of the month on Sunday after 5am and before 11am",
-    "On the 4th day of the month on Sunday after 5am and before 11am",
-    "On the 5th day of the month on Sunday after 5am and before 11am",
-    "On the 6th day of the month on Sunday after 5am and before 11am",
-    "On the 7th day of the month on Sunday after 5am and before 11am"
+    "On the 1st day of the month on Sunday",
+    "On the 2nd day of the month on Sunday",
+    "On the 3rd day of the month on Sunday",
+    "On the 4th day of the month on Sunday",
+    "On the 5th day of the month on Sunday",
+    "On the 6th day of the month on Sunday",
+    "On the 7th day of the month on Sunday"
   ],
   "timezone": "America/New_York",
   "prHourlyLimit": 0,
