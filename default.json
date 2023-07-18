@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config that should be used for any BachMacintosh projects that are not JS/TS libraries",
-  "extends": ["config:base", "group:allNonMajor", ":gitSignOff"],
+  "extends": ["config:base", ":gitSignOff"],
   "schedule": [
     "On the 1st day of the month on Sunday",
     "On the 2nd day of the month on Sunday",
@@ -13,6 +13,7 @@
   ],
   "timezone": "America/New_York",
   "prHourlyLimit": 0,
+  "prConcurrentLimit": 1,
   "labels": ["dependencies"],
   "assignees": ["bachmacintosh"],
   "rebaseWhen": "behind-base-branch",
@@ -21,9 +22,29 @@
   "dependencyDashboardHeader": "",
   "packageRules": [
     {
+      "matchDepTypes": ["devDependencies"],
+      "commitMessageTopic": "Development Dependency \"{{depName}}\""
+    },
+    {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "platformAutomerge": true
+    },
+    {
+      "extends": ["monorepo:typescript-eslint"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Development Dependency TypeScript ESLint",
+      "groupSlug": "typescript-eslint-monorepo"
+    },
+    {
+      "matchSourceUrlPrefixes": [
+        "https://github.com/facebook/jest",
+        "https://github.com/kulshekhar/ts-jest"
+      ],
+      "matchPackageNames": ["@types/jest"],
+      "matchUpdateTypes": ["patch", "minor", "major"],
+      "groupName": "Jest and/or Related Development Dependencies",
+      "groupSlug": "jest-and-deps"
     },
     {
       "matchPackageNames": ["@cloudflare/workers-types"],
@@ -32,7 +53,27 @@
     },
     {
       "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["patch"],
+      "labels": ["typescript"],
+      "commitMessageTopic": "TypeScript Development Version",
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["major", "minor"],
+      "labels": ["typescript"],
+      "commitMessageTopic": "TypeScript Development Version",
+      "dependencyDashboardApproval": true,
+      "automerge": false,
+      "platformAutomerge": false
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "matchDepTypes": ["peerDependencies"],
+      "labels": ["typescript"],
+      "commitMessageTopic": "Supported TypeScript Versions",
+      "dependencyDashboardApproval": true,
       "automerge": false,
       "platformAutomerge": false
     }
