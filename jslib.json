@@ -48,14 +48,9 @@
       "groupSlug": "jest-and-deps"
     },
     {
-      "matchSourceUrls": ["https://github.com/logtail/logtail-js"],
-      "groupName": "Logtail Packages",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor",
-        "major"
-      ]
+      "matchPackageNames": ["@cloudflare/workers-types"],
+      "schedule": ["at any time"],
+      "minimumReleaseAge": "3 days"
     },
     {
       "matchPackageNames": ["typescript"],
