@@ -13,7 +13,6 @@
   ],
   "timezone": "America/New_York",
   "prHourlyLimit": 0,
-  "prConcurrentLimit": 1,
   "labels": ["dependencies"],
   "assignees": ["bachmacintosh"],
   "rebaseWhen": "behind-base-branch",
