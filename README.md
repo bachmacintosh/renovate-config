@@ -4,7 +4,7 @@ This repo contains configurations for Renovate. These settings are set to my lik
 
 ## Default
 
-Use this config for applications.
+Use this config for JS/TS applications.
 
 ```json
 {
@@ -15,11 +15,22 @@ Use this config for applications.
 
 ## `jslib`
 
-Use this config with JS/TS applications.
+Use this config with JS/TS libraries.
 
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>bachmacintosh/renovate-config:jslib"]
+}
+```
+
+## `rust`
+
+Use this config with Rust applications.
+
+```json
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>bachmacintosh/renovate-config:rust"]
 }
 ```

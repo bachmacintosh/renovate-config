@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate config that should be used for any BachMacintosh Rust projects",
+  "extends": ["config:recommended", ":gitSignOff"],
+  "schedule": [
+    "On the 1st day of the month on Sunday",
+    "On the 2nd day of the month on Sunday",
+    "On the 3rd day of the month on Sunday",
+    "On the 4th day of the month on Sunday",
+    "On the 5th day of the month on Sunday",
+    "On the 6th day of the month on Sunday",
+    "On the 7th day of the month on Sunday"
+  ],
+  "timezone": "America/New_York",
+  "prHourlyLimit": 0,
+  "labels": ["dependencies"],
+  "assignees": ["bachmacintosh"],
+  "rebaseWhen": "behind-base-branch",
+  "platformCommit": true,
+  "minimumReleaseAge": "3 days",
+  "dependencyDashboardHeader": "",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "platformAutomerge": true
+    }
+  ]
+}
