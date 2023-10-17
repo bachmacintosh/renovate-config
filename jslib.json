@@ -47,7 +47,7 @@
       "groupSlug": "jest-and-deps"
     },
     {
-      "matchPackageNames": ["@cloudflare/workers-types"],
+      "matchPackageNames": ["@bachmacintosh/api-types", "@bachmacintosh/wanikani-api-types", "@cloudflare/workers-types", "@octokit/types", "@octokit/webhooks-types", "discord-api-types"],
       "schedule": ["at any time"],
       "minimumReleaseAge": "3 days"
     },
